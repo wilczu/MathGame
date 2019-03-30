@@ -114,3 +114,18 @@ ol > li {
 #info-container article {
     padding: 20px;
 }
+
+#infoReturn {
+    background-color: #2F97C1;
+    margin: 0;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    position: relative;
+    top: 80px;
+    right: 48%;
+}
+
+#infoReturn:hover {
+    cursor: pointer;
+}
