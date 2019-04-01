@@ -1,39 +1,44 @@
-function info() {
-    infoFadeIn();
-}
-
-function infoFadeIn() {
-    let mainCont = document.getElementById('main-container');
-    let infoCont = document.getElementById('info-container');
-    mainCont.style.transition = 'opacity 1s';
-    mainCont.style.opacity = '0';
+function FadeIn(fadein, fadeout) {
+    let FadeInCont = document.getElementById(fadein);
+    let FadeOutCont = document.getElementById(fadeout);
+    FadeInCont.style.transition = 'opacity 1s';
+    FadeInCont.style.opacity = '0';
 
     setTimeout(() => {
-        mainCont.style.display = 'none';
-        infoCont.style.display = "block";
+        FadeInCont.style.display = 'none';
+        FadeOutCont.style.display = "block";
 
         setTimeout(() => {
-            infoCont.style.transition = 'opacity 1s';
-            infoCont.style.opacity = '1';
+            FadeOutCont.style.transition = 'opacity 1s';
+            FadeOutCont.style.opacity = '1';
         },50);
 
     }, 1000);
 }
 
-function infoFadeOut() {
-    let mainCont = document.getElementById('main-container');
-    let infoCont = document.getElementById('info-container');
-    infoCont.style.transition = 'opacity 1s';
-    infoCont.style.opacity = '0';
+function FadeOut(FadeOut, FadeIn) {
+    let FadeInCont = document.getElementById(FadeOut);
+    let FadeOutCont = document.getElementById(FadeIn);
+    FadeOutCont.style.transition = 'opacity 1s';
+    FadeOutCont.style.opacity = '0';
 
     setTimeout(() => {
-        mainCont.style.display = 'block';
-        infoCont.style.display = "none";
+        FadeInCont.style.display = 'block';
+        FadeOutCont.style.display = "none";
 
         setTimeout(() => {
-            mainCont.style.transition = 'opacity 1s';
-            mainCont.style.opacity = '1';
+            FadeInCont.style.transition = 'opacity 1s';
+            FadeInCont.style.opacity = '1';
         },50);
 
     }, 1000);
+}
+
+function CustomFadeIn() {
+    let customCont = document.getElementById("custom-container");
+    customCont.style.display = 'block';
+    setTimeout(() => {
+        customCont.style.transition = 'opacity 1s';
+        customCont.style.opacity = "1";
+    }, 100);
 }

@@ -28,17 +28,17 @@
                     <li class="menuButton hard"><a href="#">Hard</a></li>
                 </ol>
                 <ol>
-                    <li class="menuButton custom" id="custom"><a href="#">Custom</a></li>
+                    <li class="menuButton custom" id="custom" onclick="CustomFadeIn();"><a href="#">Custom</a></li>
                 </ol>
                 <ol>
-                    <li class="menuButton info" onclick="info()"><a href="#">Info</a></li>
+                    <li class="menuButton info" onclick="FadeIn('main-container', 'info-container');"><a href="#">Info</a></li>
                 </ol>
             </nav>
         </section>
 
         <section id="info-container">
             <header>
-                <button id="infoReturn" onclick="infoFadeOut();"><i class="fas fa-chevron-left fa-3x"></i></button>
+                <button id="infoReturn" onclick="FadeOut('main-container', 'info-container');"><i class="fas fa-chevron-left fa-3x"></i></button>
                 <h1>About this project</h1>
             </header>
             <article>
@@ -50,6 +50,15 @@
             </article>
 
         </section>
+
+        <div id="custom-container">
+            <div id="custom-triangle"></div>
+            <section>
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                officia deserunt mollit anim id est laborum.
+            </section>
+        </div>
+
     </main>
 
 </body>
