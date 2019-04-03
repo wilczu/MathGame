@@ -133,10 +133,10 @@ ol > li {
 #custom-container {
     background-color: #fff;
     padding: 10px;
-    width: 40%;
+    width: 100%;
     position: absolute;
     top: 110%;
-    right: 31%;
+    right: 0;
     color: #000000;
     display: none;
     opacity: 0;
@@ -150,5 +150,29 @@ ol > li {
     height: 0;
     position: absolute;
     top: -24px;
-    left: 75%;
+    left: 60%;
+}
+
+form button {
+    background-color: #75CC01;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.grid-item {
+    display: inline-block;
+    text-align: center;
+}
+
+.grid-1-2 {
+    width: 48%;
+}
+
+.grid-100 {
+    width: 100%;
 }
