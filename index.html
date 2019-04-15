@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
     <script src="js/navAnimation.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 
@@ -19,16 +20,16 @@
 
             <nav>
                 <ol>
-                    <li class="menuButton easy"><a href="#">Easy</a></li>
+                    <li class="menuButton easy" onclick="startGame('easy');"><a href="#">Easy</a></li>
                 </ol>
                 <ol>
-                    <li class="menuButton medium"><a href="#">Medium</a></li>
+                    <li class="menuButton medium" onclick="startGame('medium');"><a href="#">Medium</a></li>
                 </ol>
                 <ol>
-                    <li class="menuButton hard"><a href="#">Hard</a></li>
+                    <li class="menuButton hard" onclick="startGame('hard');"><a href="#">Hard</a></li>
                 </ol>
                 <ol>
-                    <li class="menuButton custom" id="custom" onclick="CustomFadeIn();"><a href="#">Custom</a></li>
+                    <li class="menuButton custom" id="custom" onclick="customFadeIn();"><a href="#">Custom</a></li>
                 </ol>
                 <ol>
                     <li class="menuButton info" onclick="FadeIn('main-container', 'info-container');"><a href="#">Info</a></li>
@@ -60,10 +61,18 @@
                         <fieldset>
                             <legend> Which Math symbols? </legend>
 
-                            <label> <input type="radio" /> Adding ( + ) </label>
-                            <label> <input type="radio" /> Subtracting ( - ) </label>
-                            <label> <input type="radio" /> Multiplying ( * ) </label>
-                            <label> <input type="radio" /> Dividing ( / ) </label>
+                            <input id="adding" type="checkbox" />
+                            <label for="adding"><span>Add</span></label>
+
+                            <input id="subtract" type="checkbox" />
+                            <label for="subtract"><span>Subtract</span></label>
+
+                            <input id="multiple" type="checkbox" />
+                            <label for="multiple"><span>Multiple</span></label>
+
+                            <input id="divide" type="checkbox" />
+                            <label for="divide"><span>Divide</span></label>
+
 
                         </fieldset>
                     </div>
@@ -85,7 +94,7 @@
                     </div>
 
                     <div class="grid-item grid-100">
-                        <button class="custom"> Play </button>
+                        <button class="custom" onclick="startGame('custom');"> Play </button>
                     </div>
                 </form>
 

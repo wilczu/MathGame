@@ -34,11 +34,27 @@ function FadeOut(FadeOut, FadeIn) {
     }, 1000);
 }
 
-function CustomFadeIn() {
+function customFadeIn() {
     let customCont = document.getElementById("custom-container");
     customCont.style.display = 'block';
+
     setTimeout(() => {
         customCont.style.transition = 'opacity 1s';
         customCont.style.opacity = "1";
+
+        document.addEventListener("click", (event) => {
+            if(event.target.closest("#custom-container")) { return false; }
+
+            setTimeout(() => {
+                customCont.style.transition = 'opacity 1s';
+                customCont.style.opacity = '0';
+            },50);
+
+            setTimeout(() => {
+                customCont.style.display = 'none';
+            },1050);
+
+        });
+
     }, 100);
 }
