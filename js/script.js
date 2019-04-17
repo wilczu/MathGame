@@ -1,6 +1,4 @@
 function startGame($difficulty) {
-    changeBG('red');
-    console.log($difficulty);
 
     switch ($difficulty) {
         case 'easy':
@@ -22,5 +20,14 @@ function startGame($difficulty) {
 }
 
 function changeBG($color) {
+    let main = document.getElementById('center');
+    main.style.transition = 'opacity 0.5s';
+    main.style.opacity = '0';
+
+    setTimeout(() => {
+        main.style.display = "none";
+    }, 100);
+
+    document.body.style.transition = "background-color 0.5s ease";
     document.body.style.backgroundColor = $color;
 }
