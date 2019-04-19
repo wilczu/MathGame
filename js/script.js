@@ -72,3 +72,7 @@ function generateBoard(element, color){
         gameContainer.appendChild(startButton);
     }, 100);
 }
+
+function generateNum(from, to){
+    return Math.round(Math.random()*(to - from) + from);
+}
