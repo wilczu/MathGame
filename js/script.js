@@ -92,7 +92,7 @@ function genEquation(symbol, from, to){
 
     switch (symbol) {
         case 'any':
-            let Equation = firstNum + randomSymbol + secondNum;
+            let Equation = eval(firstNum + randomSymbol + secondNum);
             console.log(firstNum + randomSymbol + secondNum + ' = ' + Equation);
             break;
         default:
