@@ -4,6 +4,7 @@ function startGame(difficulty) {
         case 'easy':
             changeBG('#97CC04');
             generateBoard('center', '#64CC01');
+            genEquation('any', 5, 10);
             break;
         case 'medium':
             changeBG('#F45D01');
@@ -75,4 +76,27 @@ function generateBoard(element, color){
 
 function generateNum(from, to){
     return Math.round(Math.random()*(to - from) + from);
+}
+
+function genEquation(symbol, from, to){
+    let numFrom = from;
+    let numTo = to;
+
+    //Getting two random numbers
+    let firstNum = generateNum(numFrom, numTo);
+    let secondNum = generateNum(numFrom, numTo);
+
+    //Choosing random math symbol
+    let symbols = ['+','-','*','/'];
+    let randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
+
+    switch (symbol) {
+        case 'any':
+            let Equation = firstNum + randomSymbol + secondNum;
+            console.log(firstNum + randomSymbol + secondNum + ' = ' + Equation);
+            break;
+        default:
+            console.log('Error !');
+            break;
+    }
 }
